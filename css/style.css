@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.card-infos {
+    background-image: url(../images/bg-main-desktop.png);
+    background-color: white;
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    padding: 25px;
+    color: white;
+}
+
+.card-front .icons {
+    display: flex;
+    align-items: center;
+}
+.card-front .icons .icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.card-front .icons .icon2 {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.card-front h1 {
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-top: 60px;
+}
+
+.card-front h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.name-date {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card-back {
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    margin-left: 100px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 105px;
+    padding-left: 330px;
+}
+
+.exp-date-cvc {
+    display: flex;
+}
+
+.exp-date-cvc input {
+    width: 70px;
+}
+
+.exp-date-cvc .cvc {
+    margin-left: 15px;
+}
+
+.exp-date-cvc .cvc input {
+    width: 90px;
+}
+
+.formulario {
+    padding-left: 100px;
+}
+
+.formulario h3 {
+    text-transform: uppercase;
+    color: var(--Very-dark-violet);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #C7C7C9;
+    ;
+    margin-bottom: 20px;
+}
+
+.formulario .cardholder-name {
+    width: 250px;
+}
+
+.formulario .card-number {
+    width: 250px;
+}
+
+.formulario .confirm-btn {
+    padding: 10px 100px;
+    background-color: var(--Very-dark-violet);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario .confirm-btn:hover {
+    background-color: var(--dark-violet);
+    transition: 0.3s ease-in-out;
+}
+
+.formulario .allInputs {
+    position: relative;
+}
+
+.formulario .allInputs input {
+    cursor: pointer;
+}
+
+.formulario .allInputs.obrigatorio-n input {
+    border: 1px solid var(--Red);
+}
+
+.formulario .allInputs.obrigatorio-ok input {
+    border: 1px solid var(--dark-violet);
+}
+
+.formulario .allInputs.obrigatorio-ok .texto-desaparecer {
+    display: none;
+}
+
+.formulario.confirmado {
+    display: none;
+}
+
+.obrigatorio {
+    color: var(--Red);
+    position: absolute;
+    font-size: 12px;
+    top: 58px;
+    display: none;
+}
+
+.allInputs .number-n {
+    color: var(--Red);
+    position: absolute;
+    font-size: 12px;
+    top: 58px;
+    display: none;
+} 
+
+.allInputs.obrigatorio-n .number-n {
+    display: block;
+}
+
+.allInputs.obrigatorio-n .obrigatorio {
+    display: block;
+}
+
+.continue {
+    padding: 10px 100px;
+    background-color: var(--Very-dark-violet);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.continue:hover {
+    background-color: var(--dark-violet);
+    transition: 0.3s ease-in-out;
+}
+
+
+.completed-state {
+    display: none;
+}
+
+.completed-state.confirmado {
+    display: block;
+}
+
+.completed-state {
+    margin: 50px;
+    text-align: center;
+}
+
+.completed-state img {
+    padding-bottom: 20px;
+}
+
+.completed-state h4 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--Very-dark-violet);
+    padding-bottom: 10px;
+}
+
+.completed-state p {
+    color: var(--Dark-grayish-violet);
+    padding-bottom: 30px;
+}
+
+
+@media(max-width: 376px) {
+    .card-infos{
+        background-image: url(../images/bg-main-mobile.png);
+        display: flex;
+        flex-direction: column;
+    }
+    .card-front{
+        background-image: url(../images/bg-card-front-mobile.fw.png);
+        width: 300px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 150px;
+        position: absolute;
+    }
+
+    .card-front .icons .icon {
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .card-front .icons .icon2 {
+        width: 15px;
+        height: 15px;
+    }
+    .card-front .card-number{
+        font-size: 22px;
+        padding-left: 5px;
+        padding-top: 30px;
+    }
+    .card-front .name-date .card-name {
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .card-front .name-date .card-date {
+        padding-right: 5px;
+        font-size: 14px;
+    }
+    .card-back{
+        background-image: url(../images/bg-card-back-mobile.fw.png);
+        width: 300px;
+        padding: 0px;
+        margin: 0px;
+        margin-left: 50px;
+        margin-top: 30px;
+        padding-left: 235px;
+        padding-top: 72px;
+    }
+    .card-back .card-cvc {
+        font-size: 14px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .formulario {
+        padding: 0px;
+        padding-top: 100px;
+        margin: 0px;
+    }
+}
